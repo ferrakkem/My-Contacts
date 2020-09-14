@@ -16,6 +16,7 @@
 		F303535D250C48C900504A5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F303535B250C48C900504A5F /* LaunchScreen.storyboard */; };
 		F34606E1250EC914006B5A44 /* ContactcTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34606DF250EC914006B5A44 /* ContactcTableViewCell.swift */; };
 		F34606E2250EC914006B5A44 /* ContactcTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F34606E0250EC914006B5A44 /* ContactcTableViewCell.xib */; };
+		F34A169A250F3AE100CF1D23 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34A1699250F3AE100CF1D23 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F303535E250C48C900504A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F34606DF250EC914006B5A44 /* ContactcTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactcTableViewCell.swift; sourceTree = "<group>"; };
 		F34606E0250EC914006B5A44 /* ContactcTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactcTableViewCell.xib; sourceTree = "<group>"; };
+		F34A1699250F3AE100CF1D23 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				F3035352250C48C900504A5F /* SceneDelegate.swift */,
 				F34606D9250EC7E0006B5A44 /* Controller */,
 				F34606DA250EC7E9006B5A44 /* Views */,
+				F34A169B250F3AEE00CF1D23 /* Constant */,
 				F3035359250C48C900504A5F /* Assets.xcassets */,
 				F303535B250C48C900504A5F /* LaunchScreen.storyboard */,
 				F303535E250C48C900504A5F /* Info.plist */,
@@ -111,6 +114,14 @@
 				F34606E0250EC914006B5A44 /* ContactcTableViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F34A169B250F3AEE00CF1D23 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				F34A1699250F3AE100CF1D23 /* Constant.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +242,7 @@
 			files = (
 				F34606E1250EC914006B5A44 /* ContactcTableViewCell.swift in Sources */,
 				F3035355250C48C900504A5F /* ViewController.swift in Sources */,
+				F34A169A250F3AE100CF1D23 /* Constant.swift in Sources */,
 				F3035351250C48C900504A5F /* AppDelegate.swift in Sources */,
 				F3035353250C48C900504A5F /* SceneDelegate.swift in Sources */,
 			);
