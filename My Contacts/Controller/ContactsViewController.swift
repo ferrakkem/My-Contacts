@@ -29,7 +29,9 @@ class ContactsViewController: UIViewController {
 
     @IBAction func addbuttonPressed(_ sender: UIBarButtonItem) {
         print("Add button Pressed")
+        performSegue(withIdentifier: K.addContactIdentifier, sender: self)
     }
+        
 }
 
 
@@ -52,13 +54,15 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate{
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVc = segue.destination as! ContactViewController
-        
-        /*
-        if let indexPath = contactsTable.indexPathForSelectedRow{
-            //destinationVc.selectedContact =
+        if (segue.identifier == K.contactDetailsIdentifier) {
+            // pass data to next view
+            let destinationVc = segue.destination as! ContactDetailsViewController
+            if let indexPath = contactsTable.indexPathForSelectedRow{
+                //destinationVc.selectedContact =
+            }
+        }else if(segue.identifier == K.addContactIdentifier){
+            let addDestinationVc = segue.destination as! AddContactViewController
+            
         }
-        */
-        
     }
 }

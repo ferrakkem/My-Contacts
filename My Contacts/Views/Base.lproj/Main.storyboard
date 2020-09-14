@@ -7,16 +7,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add Contact View Controller-->
         <scene sceneID="EcP-cF-JaA">
             <objects>
-                <viewController id="7z2-UG-Xp6" sceneMemberID="viewController">
+                <viewController id="7z2-UG-Xp6" customClass="AddContactViewController" customModule="My_Contacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9nN-69-3ZJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="c5W-rN-fq7"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gKz-dZ-deq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ec2-dS-dRt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,23 +58,25 @@
                     </navigationItem>
                     <connections>
                         <outlet property="contactsTable" destination="4yY-Ai-Ty4" id="oUl-57-08l"/>
-                        <segue destination="3zW-nc-dNP" kind="presentation" identifier="contractDetails" id="6Im-c6-ryo"/>
+                        <segue destination="7z2-UG-Xp6" kind="show" identifier="addContact" id="e3o-MX-7nh"/>
+                        <segue destination="3zW-nc-dNP" kind="show" identifier="contractDetails" id="ljM-yC-jfe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050.7246376811595" y="132.58928571428572"/>
+            <point key="canvasLocation" x="1051" y="147"/>
         </scene>
-        <!--Contact View Controller-->
+        <!--Contact Details View Controller-->
         <scene sceneID="BU4-S8-ZPW">
             <objects>
-                <viewController id="3zW-nc-dNP" customClass="ContactViewController" customModule="My_Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3zW-nc-dNP" customClass="ContactDetailsViewController" customModule="My_Contacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hW3-61-I3b">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="vwf-PB-dC7"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lXn-WO-vl9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qi-Zx-f9t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

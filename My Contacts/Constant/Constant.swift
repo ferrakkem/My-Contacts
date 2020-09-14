@@ -11,6 +11,7 @@ import Foundation
 struct K{
     
     static let contactDetailsIdentifier = "contractDetails"
+    static let addContactIdentifier = "addContact"
     static let cellNibName = "ContactcTableViewCell"
     static let cellReuseIdentifier = "contactCell"
     
