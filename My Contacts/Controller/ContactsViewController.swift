@@ -35,7 +35,11 @@ class ContactsViewController: UIViewController {
 
 
 //MARK: - UITableViewDataSource
-extension ContactsViewController: UITableViewDataSource{
+extension ContactsViewController: UITableViewDataSource, UITableViewDelegate{
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellReuseIdentifier, for: indexPath) as! ContactcTableViewCell
         cell.cellConfigaration( name:"Ferrakkem", otherInfo: "Intrado.com")
@@ -43,8 +47,18 @@ extension ContactsViewController: UITableViewDataSource{
         return cell
     }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: K.contactDetailsIdentifier, sender: self)
     }
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVc = segue.destination as! ContactViewController
+        
+        /*
+        if let indexPath = contactsTable.indexPathForSelectedRow{
+            //destinationVc.selectedContact =
+        }
+        */
+        
+    }
 }

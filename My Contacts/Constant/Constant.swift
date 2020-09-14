@@ -9,6 +9,8 @@
 import Foundation
 
 struct K{
+    
+    static let contactDetailsIdentifier = "contractDetails"
     static let cellNibName = "ContactcTableViewCell"
     static let cellReuseIdentifier = "contactCell"
     
