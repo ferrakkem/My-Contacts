@@ -15,7 +15,7 @@ class ContactsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("ViewController")
+       
         setTableview()
     }
     
@@ -28,13 +28,14 @@ class ContactsViewController: UIViewController {
     }
 
     @IBAction func addbuttonPressed(_ sender: UIBarButtonItem) {
+        print("Add button Pressed")
     }
 }
 
 
 
 //MARK: - UITableViewDataSource
-extension UIViewController: UITableViewDataSource{
+extension ContactsViewController: UITableViewDataSource{
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellReuseIdentifier, for: indexPath) as! ContactcTableViewCell
         cell.cellConfigaration( name:"Ferrakkem", otherInfo: "Intrado.com")
