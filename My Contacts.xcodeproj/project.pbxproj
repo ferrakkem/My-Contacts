@@ -20,6 +20,7 @@
 		F3AEEBE4250FFB2E00C28BA1 /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEEBE3250FFB2E00C28BA1 /* ContactDetailsViewController.swift */; };
 		F3AEEBE6250FFCDF00C28BA1 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEEBE5250FFCDF00C28BA1 /* AddContactViewController.swift */; };
 		F3AEEBE82510138C00C28BA1 /* Unknown.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F3AEEBE72510138C00C28BA1 /* Unknown.jpeg */; };
+		F3C07ABB25130A4C004E47BE /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C07ABA25130A4C004E47BE /* ContactModel.swift */; };
 		F3ED82082512DE00003FD118 /* kat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3ED82072512DE00003FD118 /* kat.jpg */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		F3AEEBE3250FFB2E00C28BA1 /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 		F3AEEBE5250FFCDF00C28BA1 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		F3AEEBE72510138C00C28BA1 /* Unknown.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Unknown.jpeg; sourceTree = SOURCE_ROOT; };
+		F3C07ABA25130A4C004E47BE /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		F3ED82072512DE00003FD118 /* kat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kat.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 		F3ED82062512DBEF003FD118 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F3C07ABA25130A4C004E47BE /* ContactModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				F34606E1250EC914006B5A44 /* ContactcTableViewCell.swift in Sources */,
 				F3035355250C48C900504A5F /* ContactsViewController.swift in Sources */,
+				F3C07ABB25130A4C004E47BE /* ContactModel.swift in Sources */,
 				F3AEEBE6250FFCDF00C28BA1 /* AddContactViewController.swift in Sources */,
 				F34A169A250F3AE100CF1D23 /* Constant.swift in Sources */,
 				F3035351250C48C900504A5F /* AppDelegate.swift in Sources */,
