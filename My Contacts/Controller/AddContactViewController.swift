@@ -106,28 +106,13 @@ extension AddContactViewController:  UIImagePickerControllerDelegate , UINavigat
         imageUrlString = documentsPath!
         */
         
-        
         if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             userImage.image = editedImage
         }else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             userImage.image = originalImage
         }
         
-        //imageData = getImageData(info: info) // 1-1 사용
- 
-         
-        
-//        if let imageUrl = info[UIImagePickerController.InfoKey.imageURL]{
-//            print(imageUrl as! String)
-//        }
-        
 
-        
-        /*
-        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        userImage.image = image
-        
-        */
 
         dismiss(animated: true, completion: nil)
     }
