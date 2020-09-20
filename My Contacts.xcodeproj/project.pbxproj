@@ -18,6 +18,7 @@
 		F34606E2250EC914006B5A44 /* ContactcTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F34606E0250EC914006B5A44 /* ContactcTableViewCell.xib */; };
 		F34A169A250F3AE100CF1D23 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34A1699250F3AE100CF1D23 /* Constant.swift */; };
 		F37A7F8A2517071F0022A32C /* u.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F37A7F892517071F0022A32C /* u.jpeg */; };
+		F3A8AE9C251714460014D341 /* noPicture.png in Resources */ = {isa = PBXBuildFile; fileRef = F3A8AE9B251714460014D341 /* noPicture.png */; };
 		F3AEEBE4250FFB2E00C28BA1 /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEEBE3250FFB2E00C28BA1 /* ContactDetailsViewController.swift */; };
 		F3AEEBE6250FFCDF00C28BA1 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEEBE5250FFCDF00C28BA1 /* AddContactViewController.swift */; };
 		F3AEEBE82510138C00C28BA1 /* Unknown.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F3AEEBE72510138C00C28BA1 /* Unknown.jpeg */; };
@@ -41,6 +42,7 @@
 		F34606E0250EC914006B5A44 /* ContactcTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactcTableViewCell.xib; sourceTree = "<group>"; };
 		F34A1699250F3AE100CF1D23 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		F37A7F892517071F0022A32C /* u.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = u.jpeg; sourceTree = "<group>"; };
+		F3A8AE9B251714460014D341 /* noPicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noPicture.png; sourceTree = "<group>"; };
 		F3AEEBE3250FFB2E00C28BA1 /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 		F3AEEBE5250FFCDF00C28BA1 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		F3AEEBE72510138C00C28BA1 /* Unknown.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Unknown.jpeg; sourceTree = SOURCE_ROOT; };
@@ -136,6 +138,7 @@
 		F34A169B250F3AEE00CF1D23 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				F3A8AE9B251714460014D341 /* noPicture.png */,
 				F37A7F892517071F0022A32C /* u.jpeg */,
 				F34A1699250F3AE100CF1D23 /* Constant.swift */,
 			);
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3ED82082512DE00003FD118 /* kat.jpg in Resources */,
+				F3A8AE9C251714460014D341 /* noPicture.png in Resources */,
 				F34606E2250EC914006B5A44 /* ContactcTableViewCell.xib in Resources */,
 				F37A7F8A2517071F0022A32C /* u.jpeg in Resources */,
 				F303535D250C48C900504A5F /* LaunchScreen.storyboard in Resources */,

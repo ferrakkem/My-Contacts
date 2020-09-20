@@ -23,11 +23,28 @@ class ContactcTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func cellConfigaration( name: String, otherInfo: String){
+    func cellConfigaration(userImage: String, name: String, otherInfo: String){
         
         //self.userImage = picture
         self.userName.text = name
         self.userInfo.text = otherInfo
+        
+        DispatchQueue.global().async { [weak self] in
+            let url = URL(string: userImage)
+            if url != nil{
+                if let data = try? Data(contentsOf: url!) {
+                    if let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            self?.userImage?.image = image
+                        }
+                    }
+                }
+            }else{
+                DispatchQueue.main.async {
+                     self?.userImage?.image = UIImage.init(named: "noPicture.png")
+                }
+            }
+        }
     }
     
 }

@@ -32,7 +32,9 @@ class AddContactViewController: UIViewController{
         print("doneAction")
                 
         saveContact()
-        dismiss(animated: true, completion: nil)
+        _ = navigationController?.popToRootViewController(animated: true)
+        //present(ContactsViewController(), animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
     }
     
     //MARK: - Save to Realm

@@ -42,6 +42,18 @@ class ContactsViewController: UIViewController {
         contactModelInfo = realm.objects(ContactModel.self)
         print("contactModelInfo: \(String(describing: contactModelInfo))")
     }
+    
+    
+    func loadImageFromPath(_ path: NSString) -> UIImage? {
+
+          let image = UIImage(contentsOfFile: path as String)
+
+          if image == nil {
+              return UIImage()
+          } else{
+              return image
+          }
+      }
         
 }
 
@@ -55,7 +67,9 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate{
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellReuseIdentifier, for: indexPath) as! ContactcTableViewCell
-        cell.cellConfigaration( name:"Kat Winslet", otherInfo: "Intrado.com")
+        
+        //cell.cellConfigaration(userImage: con, name: <#T##String#>, otherInfo: <#T##String#>)
+        //( name:"Kat Winslet", otherInfo: "Intrado.com")
         cell.userImage?.setRounded()
 
         return cell
