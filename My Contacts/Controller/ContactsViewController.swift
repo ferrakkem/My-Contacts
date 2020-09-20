@@ -34,8 +34,6 @@ class ContactsViewController: UIViewController {
         
 }
 
-
-
 //MARK: - UITableViewDataSource
 extension ContactsViewController: UITableViewDataSource, UITableViewDelegate{
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

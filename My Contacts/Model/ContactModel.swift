@@ -12,5 +12,5 @@ import RealmSwift
 class ContactModel: Object {
     @objc dynamic var name: String?
     @objc dynamic var number: String?
-    @objc dynamic var imageData: Data?
+    @objc dynamic var imageData: NSData?
 }

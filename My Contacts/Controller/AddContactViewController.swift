@@ -37,7 +37,8 @@ class AddContactViewController: UIViewController{
         saveContact()
         dismiss(animated: true, completion: nil)
     }
-        
+    
+    //MARK: - Save to Realm
     func saveContact() {
                 
         let realm = try! Realm()
@@ -46,8 +47,10 @@ class AddContactViewController: UIViewController{
                 let object = ContactModel()
                 object.name = self.firstName.text
                 object.number = self.number.text
+                object.imageData = self.userImage.image?.pngData() as NSData?
                 //object.imageData = self.imageUrlString
                 realm.add(object)
+                print("Saved")
             }
         }catch{
             print("Error during contact saving: \(error)")
@@ -87,40 +90,24 @@ extension AddContactViewController:  UIImagePickerControllerDelegate , UINavigat
         present(alert, animated: true, completion: nil)
         
     }
-    
+    //MARK: - Show Image picker
     func showImagePickerController(sourceType: UIImagePickerController.SourceType) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         imagePickerController.allowsEditing = true
         imagePickerController.sourceType = .photoLibrary
-        //imagePickerController.sourceType = .camera
         present(imagePickerController, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        /*
-        let documentsPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsPath = documentsPaths.first
-        print(documentsPath!)
-        
-        imageUrlString = documentsPath!
-        */
-        
+
         if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             userImage.image = editedImage
         }else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             userImage.image = originalImage
         }
-        
-
-
-        dismiss(animated: true, completion: nil)
-    }
     
-    func getImageData(info:[String : Any]) -> Data {
-        let image = info[UIImagePickerController.InfoKey.originalImage.rawValue] as! UIImage
-        let data = image.jpegData(compressionQuality: 0.7)
-        return data!
+        dismiss(animated: true, completion: nil)
     }
     
 }
