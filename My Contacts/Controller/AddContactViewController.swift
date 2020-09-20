@@ -18,10 +18,6 @@ class AddContactViewController: UIViewController{
     @IBOutlet weak var emailAddress: UITextField!
     @IBOutlet weak var number: UITextField!
     
-    var imageUrlString: String?
-    
-    var imageData: Data?  =  nil
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         userImage.setRounded()
@@ -34,6 +30,7 @@ class AddContactViewController: UIViewController{
     
     @IBAction func doneAction(_ sender: UIBarButtonItem) {
         print("doneAction")
+                
         saveContact()
         dismiss(animated: true, completion: nil)
     }
@@ -45,7 +42,7 @@ class AddContactViewController: UIViewController{
         do{
             try realm.write{
                 let object = ContactModel()
-                object.name = self.firstName.text
+                object.firstName = self.firstName.text
                 object.number = self.number.text
                 object.imageData = self.userImage.image?.pngData() as NSData?
                 realm.add(object)
@@ -64,7 +61,23 @@ extension UIImageView {
         self.layer.cornerRadius = (self.frame.height / 2)
         self.layer.masksToBounds = true
     }
+}
+
+//MARK: - String  extension
+extension String{
     
+    func isBlankOrEmpty() -> Bool {
+        // Check empty string
+        if self.isEmpty {
+            return true
+        }
+        // Trim and check empty string
+        return (self.trimmingCharacters(in: .whitespaces) == "")
+    }
+    
+    public var isNumber: Bool {
+        return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
+    }
 }
 
 //MARK: - UIImagePickerControllerDelegate and UINavigationControllerDelegate

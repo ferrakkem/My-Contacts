@@ -37,7 +37,6 @@ class ContactsViewController: UIViewController {
         performSegue(withIdentifier: K.addContactIdentifier, sender: self)
     }
     
-    
     func loadInformation() {
         //let realm = try! Realm()
         contactModelInfo = realm.objects(ContactModel.self)
@@ -48,8 +47,10 @@ class ContactsViewController: UIViewController {
 
 //MARK: - UITableViewDataSource
 extension ContactsViewController: UITableViewDataSource, UITableViewDelegate{
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
+        //return contactModelInfo?.count ?? 1
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,7 +58,6 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate{
         cell.cellConfigaration( name:"Kat Winslet", otherInfo: "Intrado.com")
         cell.userImage?.setRounded()
 
-        
         return cell
     }
     

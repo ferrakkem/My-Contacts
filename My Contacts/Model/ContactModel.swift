@@ -10,7 +10,10 @@ import Foundation
 import RealmSwift
 
 class ContactModel: Object {
-    @objc dynamic var name: String?
+    @objc dynamic var firstName: String?
+    @objc dynamic var lastName: String?
+    @objc dynamic var company: String?
     @objc dynamic var number: String?
+    @objc dynamic var email: String?
     @objc dynamic var imageData: NSData?
 }
