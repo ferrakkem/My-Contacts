@@ -48,7 +48,6 @@ class AddContactViewController: UIViewController{
                 object.name = self.firstName.text
                 object.number = self.number.text
                 object.imageData = self.userImage.image?.pngData() as NSData?
-                //object.imageData = self.imageUrlString
                 realm.add(object)
                 print("Saved")
             }

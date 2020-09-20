@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ContactsViewController: UIViewController {
+    
+    let realm = try! Realm()
+    var contactModelInfo: Results<ContactModel>?
 
     @IBOutlet weak var contactsTable: UITableView!
     
@@ -17,6 +21,7 @@ class ContactsViewController: UIViewController {
         // Do any additional setup after loading the view.
        
         setTableview()
+        loadInformation()
     }
     
     //MARK: - setUp or Register UItableView
@@ -30,6 +35,13 @@ class ContactsViewController: UIViewController {
     @IBAction func addbuttonPressed(_ sender: UIBarButtonItem) {
         print("Add button Pressed")
         performSegue(withIdentifier: K.addContactIdentifier, sender: self)
+    }
+    
+    
+    func loadInformation() {
+        //let realm = try! Realm()
+        contactModelInfo = realm.objects(ContactModel.self)
+        print("contactModelInfo: \(String(describing: contactModelInfo))")
     }
         
 }
